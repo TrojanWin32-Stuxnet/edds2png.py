@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edds2png"
+version = "0.1.0"
+description = "Convert Bohemia EDDS texture files to PNG."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "lz4>=4.4",
+    "Pillow>=10",
+]
+
+[project.scripts]
+edds2png = "edds2png.converter:main"
+
+[tool.setuptools.packages.find]
+include = ["edds2png*"]
